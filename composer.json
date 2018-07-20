@@ -1,0 +1,15 @@
+{
+    "name": "mgerasimchuk/m-screenshot-based-test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Mikhail Gerasimchuk",
+            "email": "gerasimchuk.mihail@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "~7.2.0",
+        "codeception/codeception": "^2.4",
+        "codeception/visualception": "^1.0"
+    }
+}

@@ -1,0 +1,22 @@
+version: '3'
+services:
+  chrome:
+    image: selenium/standalone-chrome:3.13.0
+    volumes:
+      - /dev/shm:/dev/shm
+    networks:
+      - codesel-network
+  codecept:
+    #build:
+    #  context: .
+    #  dockerfile: CodeceptDockerfile
+    image: mgerasimchuk/codecept
+    volumes:
+      - ./tests:/project/tests
+    networks:
+      - codesel-network
+    depends_on:
+      - chrome
+networks:
+  codesel-network:
+    driver: bridge

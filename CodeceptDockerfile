@@ -1,0 +1,12 @@
+FROM codeception/codeception:2.4.4
+
+RUN apt-get update && apt-get install -y --no-install-recommends libmagickwand-dev
+
+
+RUN pecl install imagick
+
+RUN docker-php-ext-enable imagick
+
+COPY . /project
+RUN composer install
+RUN codecept build
