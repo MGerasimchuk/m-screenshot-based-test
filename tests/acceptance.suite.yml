@@ -9,9 +9,11 @@ modules:
     enabled:
         - WebDriver:
             url: http://keenthemes.com
-            host: chrome
+            host: selenoid
             port: 4444
             browser: chrome
+            capabilities:
+                enableVNC: true
         - VisualCeption:
             saveCurrentImageIfFailure: true
             fullScreenShot: true
